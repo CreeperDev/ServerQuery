@@ -1,0 +1,25 @@
+name: ServerQuery
+main: me.machnikowski.ServerQuery.ServerQuery
+version: 1.0
+author: Machnikowski
+Description: ServerQuery is a query system for all your server information.
+commands:
+    sq:
+      usage: /<command> <args>
+      description: Root for all commands
+    q:
+      usage: /<command> <args>
+      description: Root for all querys
+permissions:
+    sq.help:
+      default: false
+      description: Allows user to see the help list
+    sq.info:
+      default: false
+      description: Allows user to see plugin info
+    sq.reload:
+      default: false
+      description: Allows user to reload configuration
+    sq.use:
+      default: false
+      description: Allows user to use basic function commands
