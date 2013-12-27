@@ -20,6 +20,7 @@ public class ServerQuery extends JavaPlugin{
 		settings.setup(this);
 		Bukkit.getServer().getLogger().info("[ServerQuery] is ready to use!");
 		Bukkit.getServer().getPluginManager().registerEvents(new PlayerListener(), this);
+		Bukkit.getServer().getPluginManager().registerEvents(new ChatListener(), this);
 		getCommand("sq").setExecutor(new CommandSQ(this));
 		getCommand("q").setExecutor(new CommandQ(this));
 	}
