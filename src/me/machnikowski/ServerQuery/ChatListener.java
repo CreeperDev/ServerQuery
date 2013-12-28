@@ -11,7 +11,7 @@ public class ChatListener implements Listener{
 	
 	@EventHandler
 	public void onPlayerChat(AsyncPlayerChatEvent e){
-		if(e.getMessage().equalsIgnoreCase("owner")){
+		if(e.getMessage().equalsIgnoreCase(pl.getConfig().getString("keyword.owner"))){
 			e.getPlayer().sendMessage(ChatColor.AQUA + "The Owner is " + pl.getConfig().getString("Owner") + "!");
 		}
 	}
