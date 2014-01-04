@@ -11,8 +11,11 @@ public class ChatListener implements Listener{
 	
 	@EventHandler
 	public void onPlayerChat(AsyncPlayerChatEvent e){
-		if(e.getMessage().equalsIgnoreCase(pl.getConfig().getString("keyword.owner"))){
+		if(e.getMessage().equalsIgnoreCase("owner")){
 			e.getPlayer().sendMessage(ChatColor.AQUA + "The Owner is " + pl.getConfig().getString("Owner") + "!");
+		}
+		if(e.getMessage().equalsIgnoreCase("twitter")){
+			e.getPlayer().sendMessage(ChatColor.AQUA + "Twitter account " + pl.getConfig().getString("Twitter"));
 		}
 	}
 
