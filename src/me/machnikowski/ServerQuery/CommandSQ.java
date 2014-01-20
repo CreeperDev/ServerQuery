@@ -10,7 +10,6 @@ import org.bukkit.command.CommandSender;
 public class CommandSQ implements CommandExecutor {
 	
 	private ServerQuery pl;
-	private SettingsManager settings;
 	
 	public CommandSQ(ServerQuery plugin){
 		this.pl = plugin;
@@ -59,9 +58,9 @@ public class CommandSQ implements CommandExecutor {
 				}
 			}else if (args[0].equalsIgnoreCase("reload")){
 				if(sender.hasPermission("sq.reload") || sender.isOp()){
-					settings.reloadConfig();
-					settings.saveConfig();
-					settings.getConfig();
+					pl.settings.reloadConfig();
+					pl.settings.saveConfig();
+					pl.settings.getConfig();
 					sender.sendMessage(ChatColor.AQUA + "ServerQuery has been reloaded!");
 					return true;
 				}else{
